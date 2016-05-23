@@ -6,15 +6,9 @@ def random_list():
         list_name.append(randint(1, 100))
     return list_name
 
-
 def listoverlap(list1, list2):
-    result_list = []
-    main_list = list1 + list2
-    for i in range(1, max(main_list)):
-        if i in main_list:
-            result_list.append(i)
+    result_list = (sorted(list(set(a) | set(b))))
     return result_list
-
 
 def main():
     print (listoverlap(a,b))
@@ -23,4 +17,6 @@ def main():
 a = random_list()
 b = random_list()
 if __name__ == '__main__':
+    print (a)
+    print (b)
     main()
